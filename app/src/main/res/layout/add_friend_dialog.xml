@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/backg_dialog"
+    android:layout_height="500dp">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:text="@string/adding_friend"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_height="40dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/title"
+        android:id="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:textColor="@color/white"
+        android:text="Username"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_below="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Do you want to add him/her as a friend?"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+
+
+    <Button
+        android:id="@+id/btnYes"
+        android:layout_below="@+id/question"
+        android:background="@drawable/buttonbckground"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:text="Yes"/>
+
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_below="@+id/question"
+        android:background="@drawable/buttonbckground"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:text="No"/>
+
+</RelativeLayout>

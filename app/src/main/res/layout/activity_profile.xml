@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="#5981BC"
+    android:orientation="vertical"
+    android:layout_width="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_below="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:text="Username:"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@id/profile_image"
+            android:layout_toRightOf="@id/tvUserName"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:background="@android:color/transparent" />
+
+
+        <TextView
+            android:id="@+id/tvFullname"
+            android:layout_below="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="@string/tx_full_name"/>
+
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/tvFullname"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_below="@+id/tvFullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="Email:"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="invisible"
+            android:textColorLink="@android:color/white"
+            android:layout_below="@+id/fullname"
+            android:layout_toRightOf="@id/tvEmail"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_below="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="Phone number:"/>
+
+        <EditText
+            android:id="@+id/number"
+            android:inputType="phone"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:textColorLink="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/email"
+            android:layout_toRightOf="@id/tvNumber"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tvHomeTown"
+            android:layout_below="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="Home Town:"/>
+
+        <EditText
+            android:id="@+id/hometown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:autoLink="map"
+            android:layout_below="@+id/tvNumber"
+            android:visibility="invisible"
+            android:layout_toRightOf="@id/tvHomeTown"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tvBornTown"
+            android:layout_below="@+id/tvHomeTown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="Place of birth:"/>
+
+        <EditText
+            android:id="@+id/borntown"
+            android:autoLink="map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/hometown"
+            android:layout_toRightOf="@id/tvBornTown"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:inputType=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/tvBornTime"
+            android:layout_below="@+id/tvBornTown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="Date of birth:"/>
+
+        <EditText
+            android:id="@+id/borntime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/borntown"
+            android:layout_toRightOf="@id/tvBornTime"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:background="@drawable/buttonbckground"
+            android:layout_below="@id/seemyprofile"
+            android:layout_marginTop="40dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv1username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@id/profile_image"
+            android:layout_toRightOf="@id/tvUserName"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="email"
+            android:text=""
+            android:textColorLink="@android:color/white"
+            android:layout_below="@+id/fullname"
+            android:layout_toRightOf="@id/tvEmail"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tvFullname"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1number"
+            android:inputType="phone"
+            android:clickable="true"
+            android:autoLink="phone"
+            android:textColorLink="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/email"
+            android:layout_toRightOf="@id/tvNumber"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1hometown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:clickable="true"
+            android:autoLink="map"
+            android:layout_below="@+id/tvNumber"
+            android:layout_toRightOf="@id/tvHomeTown"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1borntown"
+            android:autoLink="map"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/hometown"
+            android:layout_toRightOf="@id/tvBornTown"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:inputType=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv1borntime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/borntown"
+            android:layout_toRightOf="@id/tvBornTime"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/seemyprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBornTime"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/who_can_see_personal_datas"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/seemyprofile">
+
+            <RadioButton
+                android:id="@+id/everyone"
+                android:checked="true"
+                android:buttonTint="@color/white"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Everyone"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:textStyle="bold"
+                android:onClick="checkButton"/>
+
+            <RadioButton
+                android:id="@+id/friends"
+                android:text="Only friends"
+                android:layout_marginLeft="60dp"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="checkButton"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

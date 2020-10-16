@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "492873641772",
+    "firebase_url": "https://bestchat-10443.firebaseio.com",
+    "project_id": "bestchat-10443",
+    "storage_bucket": "bestchat-10443.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492873641772:android:054c3eba18a5ed130c4689",
+        "android_client_info": {
+          "package_name": "hu.bme.aut.bestchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492873641772-nsd828g6dagjaujqlous16lg72f0bemt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hu.bme.aut.bestchat",
+            "certificate_hash": "b7dfd58f7ed761939edd5927b1cb376d416ce506"
+          }
+        },
+        {
+          "client_id": "492873641772-apa173reensnc2c2ajd58fsshlplv7ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4f0le_d4ZtfPe-dytlPrEo_mt9SWHkGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492873641772-apa173reensnc2c2ajd58fsshlplv7ua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

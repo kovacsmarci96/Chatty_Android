@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_height="300dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentBottom="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        app:civ_border_width="10dp"
+        app:civ_border_color="#05df29"
+        android:id="@+id/img_on"
+        android:visibility="gone"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_toRightOf="@id/profile_image"/>
+    <TextView
+        android:id="@+id/txt_seen"
+        android:layout_below="@id/show_message"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        app:civ_border_width="10dp"
+        app:civ_border_color="#bfbfbf"
+        android:visibility="gone"
+        android:id="@+id/img_off"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_toRightOf="@id/profile_image"/>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/text_image"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:paddingStart="8dp"
+        app:riv_corner_radius="20dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:layout_alignParentRight="true"
+        android:visibility="visible"
+        android:maxWidth="250dp"
+        android:minWidth="120dp"
+        android:layout_width="200dp"
+        android:layout_height="270dp"
+        android:layout_marginRight="46dp"/>
+
+    <TextView
+        android:id="@+id/users_location"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:text="hello"
+        android:padding="8dp"
+        android:id="@+id/show_message1"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:background="@drawable/background_left_position"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:text="hello"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:id="@+id/show_message"
+        android:textSize="18sp"
+        android:background="@drawable/background_left"/>
+
+</RelativeLayout>
